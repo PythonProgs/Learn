@@ -1,5 +1,5 @@
 def ekstraksi_data():
-    hasil=dict
+    hasil=dict()
     hasil['tanggal']='24 Agustus 2021'
     hasil['waktu']='14:32'
     return hasil
