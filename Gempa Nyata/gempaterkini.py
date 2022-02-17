@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 def ekstraksi_data():
     try:
-        content=requests.get('http://bmkg.go.id')
+        content=requests.get('https://bmkg.go.id')
     except Exception:
         return None
 
@@ -55,3 +55,11 @@ def tampilkan_data(result):
     if result is None:
         print("Tidak bisa menemukan data gempa terkini")
         return
+    print('Gempa terakhir berdasarkan BMKG')
+    print(f"Tanggal {result['tanggal']}")
+    print(f"Waktu {result['waktu']}")
+    print(f"Magnitudo {result['magnitudo']}")
+    print(f"Kedalaman {result['kedalaman']}")
+    print(f"Lokasi {result['lokasi']}")
+    print(f"Koordinat: LS = {result['koordinat']['ls']}, BT = {result['koordinat']['bt']}")
+    print(f"{result['dirasakan']}")

@@ -1,6 +1,6 @@
-from gempaterkini import ekstraksi_data, tampilkan_data
+from gempaterkini import ekstraksi_data,tampilkan_data
 
 if __name__=='__main__':
-    print("\nAplikasi Utama")
+    print("Aplikasi Utama")
     result=ekstraksi_data()
     tampilkan_data(result)
