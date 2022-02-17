@@ -1,3 +1,6 @@
+import requests
+from bs4 import BeautifulSoup
+
 def ekstraksi_data():
     try:
         content=requests.get('http://bmkg.go.id')
@@ -8,11 +11,11 @@ def ekstraksi_data():
         soup=BeautifulSoup(content.text,'html.parser')
         result=soup.find('span',{'class':'waktu'})
         result=result.text.split(', ')
-        tangggal=result[0]
+        tanggal=result[0]
         waktu=result[1]
 
         result=soup.find('div',{'class':'col-md-6 col-xs-6 gempabumi-detail no-padding'})
-        result=result.findchildren('li')
+        result=result.findChildren('li')
         i=0
         magnitudo=None
         kedalmaan=None
