@@ -18,7 +18,7 @@ def ekstraksi_data():
         result=result.findChildren('li')
         i=0
         magnitudo=None
-        kedalmaan=None
+        kedalaman=None
         ls=None
         bt=None
         lokasi=None
